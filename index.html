@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<style type="text/css">
+body{
+	margin: 30px 30px 30px 30px;
+	background-color: black;
+	font-family: 'Consolas';
+	color: rgb(0, 255, 0);
+	text-align: center;
+}
+p{
+	padding: 100px 250px 0px 250px;
+	font-size: 30px;
+}
+input{
+	background-color: black;
+	text-align: center;
+	width: 15%;
+	height: 30px;
+	color: rgb(0, 255, 0);
+	border: none;
+	border-bottom: 2px solid rgb(0, 255, 0);
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+input[type=text]:focus {
+    width: 90%;
+}
+</style>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Binary Code</title>
+</head>
+<body>
+<h1>Binary Code</h1>
+<input type="text" id="text" placeholder="Write some text to code in binary" onkeyup="binary()">
+
+<p id="result"></p>
+<script type="text/javascript">
+function binary(){
+	var x = document.getElementById('text').value;
+	var y = document.getElementById('result');
+	if (isNaN(x)) {
+		y.innerHTML = 'é texto: '+ x;
+	}else {
+		z = []
+		while (x != 0){
+			z.push(x%2);
+			x = parseInt(x/2);	
+		}
+		y.innerHTML = (z.reverse()).join(' ');
+	}
+}	
+</script>
+</body>
+</html>
