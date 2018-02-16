@@ -41,8 +41,10 @@ input[type=text]:focus {
 function binary(){
 	var x = document.getElementById('text').value;
 	var y = document.getElementById('result');
+	var dic = {'A': '01000001', 'a': '01100001',
+	};
 	if (isNaN(x)) {
-		y.innerHTML = 'é texto: '+ x;
+		y.innerHTML = 'tu acha q eu sou pro pra escrever isso em binário '+ x;	
 	}else {
 		z = []
 		while (x != 0){
